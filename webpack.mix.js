@@ -11,7 +11,14 @@ const mix = require('laravel-mix');
  |
  */
 
-mix.js('resources/js/app.js', 'public/js')
-    .postCss('resources/css/app.css', 'public/css', [
+mix.autoload({
+    jquery: ['$', 'window.jQuery',"jQuery","window.$","jquery","window.jquery"],
+    'popper.js/dist/umd/c.js': ['Popper'],
+});
+
+mix.js('resources/js/app.js', 'public/js').extract();
+
+mix.sass('resources/scss/app.scss', 'public/css', [
         //
     ]);
+

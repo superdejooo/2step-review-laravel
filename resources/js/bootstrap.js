@@ -10,19 +10,11 @@ window.axios = require('axios');
 
 window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
 
-/**
- * Echo exposes an expressive API for subscribing to channels and listening
- * for events that are broadcast by Laravel. Echo and event broadcasting
- * allows your team to easily build robust real-time web applications.
- */
 
-// import Echo from 'laravel-echo';
-
-// window.Pusher = require('pusher-js');
-
-// window.Echo = new Echo({
-//     broadcaster: 'pusher',
-//     key: process.env.MIX_PUSHER_APP_KEY,
-//     cluster: process.env.MIX_PUSHER_APP_CLUSTER,
-//     forceTLS: true
-// });
+/*
+* Basically, the plugin I found for the rating system requires jQuery, so we'll load jQuery and bootstrap-rating plugin.
+* I don't think this part is that important in my task, because I definitely applied for a backend position.
+*/
+global.$ = global.jQuery = jQuery = require("jquery");
+require('bootstrap-star-rating');
+require('bootstrap-star-rating/themes/krajee-fa/theme.min');
