@@ -39,13 +39,13 @@ $secondary:     #8BBEB2 !default;
 @import "~bootstrap/scss/alert";
 //@import "~bootstrap/scss/progress";
 //@import "~bootstrap/scss/list-group";
-//@import "~bootstrap/scss/close";
-//@import "~bootstrap/scss/toasts";
+@import "~bootstrap/scss/close";
+@import "~bootstrap/scss/toasts";
 //@import "~bootstrap/scss/modal";
 //@import "~bootstrap/scss/tooltip";
 //@import "~bootstrap/scss/popover";
 //@import "~bootstrap/scss/carousel";
-//@import "~bootstrap/scss/spinners";
+@import "~bootstrap/scss/spinners";
 @import "~bootstrap/scss/offcanvas";
 @import "~bootstrap/scss/placeholders";
 
@@ -144,3 +144,15 @@ body {
 }
 
 
+body.thank-you {
+    background-color: #F2F2F2;
+
+    .main-title {
+        font-size: 37px;
+    }
+    .main-subtitle {
+        font-size: 22px;
+        font-weight: normal;
+        line-height: 27px;
+    }
+}

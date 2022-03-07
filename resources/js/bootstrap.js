@@ -16,5 +16,6 @@ window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
 * I don't think this part is that important in my task, because I definitely applied for a backend position.
 */
 global.$ = global.jQuery = jQuery = require("jquery");
+window.bootstrap = require('bootstrap');
 require('bootstrap-star-rating');
 require('bootstrap-star-rating/themes/krajee-fa/theme.min');

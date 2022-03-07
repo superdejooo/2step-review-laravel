@@ -1,6 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use \App\Http\Controllers\ReviewController;
+use \App\Http\Controllers\LinkController;
 
 /*
 |--------------------------------------------------------------------------
@@ -13,6 +15,11 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', [LinkController::class, 'create']);
+Route::post('/store-link', [LinkController::class, 'store']);
+
+Route::get('/review/{slug}', [ReviewController::class, 'show']);
+
+Route::view('/thank-you', 'thank_you');
+
+
