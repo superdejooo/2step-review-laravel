@@ -38,7 +38,8 @@ class LinkController extends Controller
         $this->validate($request, [
             'store_id'=>'required',
             'user_id' => 'required',
-            'expiration_date' => 'required|date'
+            'expiration_date' => 'required|date',
+            'slug' => 'unique:links,slug'
         ]);
 
         $input = $request->all();
